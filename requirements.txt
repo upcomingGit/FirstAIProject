@@ -1,4 +1,6 @@
 python-dotenv
 uvicorn
 pydantic
+jinja2
+python-multipart
 fastapi

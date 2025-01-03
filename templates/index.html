@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Frontend Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>FastAPI Input Form</h1>
+        
+        <form method="POST" class="input-form">
+            <div class="form-group">
+                <label for="user_input">Enter your input:</label>
+                <input type="text" 
+                       id="user_input" 
+                       name="user_input" 
+                       required 
+                       placeholder="Type something...">
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        {% if message %}
+        <div class="response">
+            <h2>Server Response:</h2>
+            <p>{{ message }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
